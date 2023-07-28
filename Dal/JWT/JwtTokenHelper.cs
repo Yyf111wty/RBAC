@@ -32,7 +32,16 @@ namespace Dal.JWT
             //基于声明的认证
             //定义声明的集合
             List<Claim> claims = new List<Claim>();
-
+            //claims.Add(new Claim(ClaimTypes.NameIdentifier, user.UId.ToString()));
+            //claims.Add(new Claim(ClaimTypes.Name, user.Account));
+            //if (user.Account.ToLower() == "admin")
+            //{
+            //    claims.Add(new Claim(ClaimTypes.Role, "admin"));
+            //}
+            //else
+            //{
+            //    claims.Add(new Claim(ClaimTypes.Role, "users"));
+            //}
             //用反射把数据提供给它
             foreach (var item in entity.GetType().GetProperties())
             {
@@ -79,7 +88,6 @@ namespace Dal.JWT
         /// <returns></returns>
         public TokenResult CreateToken(List<Claim> claims)
         {
-            var adsf = _tokenOptions.Value.Secret;
             //秘钥 转化成UTF8编码的字节数组
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenOptions.Value.Secret));
 

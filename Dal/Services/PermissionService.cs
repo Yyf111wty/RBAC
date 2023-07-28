@@ -69,6 +69,64 @@ namespace Dal.Services
 
             return tos;
         }
-        
+        /// <summary>
+        /// 添加权限
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Add(PermissionAddDto model)
+        {
+            //AutoMapper数据类型转换
+            Permission permission = new Permission()
+            {
+                PTitle = model.PTitle,
+                PAction = model.PAction,
+                ParentId= model.ParentId,
+                PApiUrl= model.PApiUrl,
+                IsMenu= model.IsMenu,
+                IconName = model.IconName,
+                SortNo = model.SortNo,
+            };
+            return _db.Insertable<Permission>(permission).ExecuteCommand();
+        }
+        /// <summary>
+        /// 删除权限
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+        public int Del(string ids)
+        {
+            string[] arrId = ids.Split(',');
+            return _db.Deleteable<Permission>(arrId).ExecuteCommand();
+        }
+        /// <summary>
+        /// 权限修改
+        /// </summary>
+        /// <param name="permission"></param>
+        /// <returns></returns>
+        public int Upt(PermissionUpdDto model)
+        {
+            Permission permission = new Permission()
+            {
+                PTitle = model.PTitle,
+                PAction = model.PAction,
+                ParentId = model.ParentId,
+                PApiUrl = model.PApiUrl,
+                IsMenu = model.IsMenu,
+                IconName = model.IconName,
+                SortNo = model.SortNo,
+            };
+            return _db.Updateable<Permission>(permission).ExecuteCommand();
+        }
+
+        /// <summary>
+        /// 根据主键获取权限
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Permission Get(int id)
+        {
+            return _db.Queryable<Permission>().First(s=>s.PermissionId.Equals(id));
+        }
     }
 }

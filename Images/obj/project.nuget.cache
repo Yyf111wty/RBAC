@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Xq4r5k9mkqsc6fJImQchLtdlLP933IZXPzvanK/CR0ha9V5K3Oe0uz3ilQmDMIpBTSXJlINMdTRKcY6EPgSGpw==",
+  "dgSpecHash": "kEz4PhL9SsbdJ73fiaBVpLeqv+ZAdQ3TGjHXGV7i4TwE/KcVDAqf9AOwMmJFK75Feoup06BCaVjhr/++jFKU0A==",
   "success": true,
   "projectFilePath": "D:\\YunfeiYouWork\\RBACgit\\Images\\Images\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sszjj\\.nuget\\packages\\autofac\\7.0.1\\autofac.7.0.1.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\sszjj\\.nuget\\packages\\csrediscore\\3.8.670\\csrediscore.3.8.670.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\flurl\\3.0.6\\flurl.3.0.6.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\flurl.http\\3.2.4\\flurl.http.3.2.4.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\md5\\2.0.3\\md5.2.0.3.nupkg.sha512",
@@ -82,6 +83,7 @@
     "C:\\Users\\sszjj\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\sszjj\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []

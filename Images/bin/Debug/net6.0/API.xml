@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="T:API.Auth.PermissionAuthorizationHandler">
+            <summary>
+            授权处理（自定义策略授权）
+            </summary>
+        </member>
+        <member name="M:API.Auth.PermissionAuthorizationHandler.#ctor(Dal.Interfaces.IUserService,Microsoft.Extensions.Logging.ILogger{API.Auth.PermissionAuthorizationHandler})">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:API.Auth.PermissionAuthorizationHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,API.Auth.PermissionAuthorizationRequirement)">
+            <summary>
+            处理授权条件
+            </summary>
+            <param name="context"></param>
+            <param name="requirement"></param>
+            <returns></returns>
+        </member>
+        <member name="T:API.Auth.PermissionAuthorizationRequirement">
+            <summary>
+            自定义策略授权-必要条件
+            </summary>
+        </member>
+        <member name="M:API.Auth.PermissionAuthorizationRequirement.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="P:API.Auth.PermissionAuthorizationRequirement.Path">
+            <summary>
+            Api路径
+            </summary>
+        </member>
+        <member name="T:API.Auth.PermissionAuthorizeFilter">
+            <summary>
+            自定义权限授权过滤器
+            </summary>
+        </member>
+        <member name="M:API.Auth.PermissionAuthorizeFilter.OnAuthorizationAsync(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            认证授权处理
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:API.Config.AutofacConfig">
+            <summary>
+            autofac的配置
+            </summary>
+        </member>
+        <member name="M:API.Config.AutofacConfig.UseAutofac(Microsoft.Extensions.Hosting.IHostBuilder)">
+            <summary>
+            扩展方法使用autofac的扩展
+            </summary>
+            <param name="host"></param>
+        </member>
+        <member name="M:API.Config.SwaggerConfig.AddAuthenticationSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            配置认证服务
+            </summary>
+            <param name="services"></param>
+            <param name="Configuration"></param>
+        </member>
+        <member name="M:API.Config.SwaggerConfig.AddAuthorizationSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置授权服务
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:API.Controllers.AccountController.Login(Dal.DTO.UserLoginRequestDto,Dal.JWT.JwtTokenHelper)">
+            <summary>
+            登录
+            </summary>
+            <param name="userLogin"></param>
+            <param name="_jwtTokenHelper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.AccountController.RefreshAccessToken(System.String,Dal.JWT.JwtTokenHelper)">
+            <summary>
+            刷新 访问token
+            </summary>
+            <param name="rtoken">刷新令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.AccountController.GetMenus">
+            <summary>
+            通过用户Id获取菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadImage3">
+            <summary>
+            下载图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadFile3">
+            <summary>
+            下载文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadImageAsync">
+            <summary>
+            异步下载图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadImage0">
+            <summary>
+            图片流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadFile">
+            <summary>
+            文件流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadImage2">
+            <summary>
+            下载图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadFile2">
+            <summary>
+            下载文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadImage4">
+            <summary>
+            下载图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.FileController.DownloadFile4">
+            <summary>
+            下载文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.HomeController.CreateDBuseDB">
+            <summary>
+            DbFirst创建数据表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.HomeController.CreateDBuseCode">
+            <summary>
+            CodeFirst创建数据表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.PermissionController.#ctor(Dal.Interfaces.IPermissionService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="permissionService"></param>
+        </member>
+        <member name="M:API.Controllers.PermissionController.GetPTree">
+            <summary>
+            获取权限树形数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.PermissionController.Add(Dal.DTO.PermissionsDto.PermissionAddDto)">
+            <summary>
+            添加权限
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.PermissionController.Upt(Dal.DTO.PermissionsDto.PermissionUpdDto)">
+            <summary>
+            修改权限
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.PermissionController.Del(System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.PermissionController.Get(System.Int32)">
+            <summary>
+            根据Id获取权限（返填）
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.RoleController.CreateRole(Dal.DTO.RoleDto)">
+            <summary>
+            添加角色
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.RoleController.AddRolePermission(Dal.DTO.RoleAddPermissionDto)">
+            <summary>
+            添加角色权限
+            </summary>
+            <param name="roleAddPermissionDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.RoleController.DeleteRole(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.RoleController.GetRole(Dal.DTO.RoleFindPageDto)">
+            <summary>
+            分页显示角色
+            </summary>
+            <param name="findPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.RoleController.UptRole(Entity.Models.Role)">
+            <summary>
+            修改角色
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.RoleController.GetRolePermission(System.Int32)">
+            <summary>
+            获取角色对应的权限id
+            </summary>
+            <param name="rid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.UserController.Add(Dal.DTO.UserAddDto)">
+            <summary>
+            注册
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.UserController.GetPermissions(System.Int32)">
+            <summary>
+            获取所有接口常量(promissions中定义的)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

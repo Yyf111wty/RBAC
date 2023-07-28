@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "epdtQyADMohJamh8syTlawF2xO5N2SVIMLPp3umMyMckuwc8JMssAF0b9cXq6XSMfc5f4I3KpiMcxRqNJw3+yg==",
+  "dgSpecHash": "c+ySyqXji30Qku3pyaLaQn6xKc2eokCQJBFl5zdIrsIiExCciOUeqkhDE4PGKu2z8QM7f979s8Lh9FKDOjF/8g==",
   "success": true,
   "projectFilePath": "D:\\YunfeiYouWork\\RBACgit\\Images\\Dal\\Dal.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sszjj\\.nuget\\packages\\csrediscore\\3.8.670\\csrediscore.3.8.670.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\md5\\2.0.3\\md5.2.0.3.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -68,6 +69,7 @@
     "C:\\Users\\sszjj\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\sszjj\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\sszjj\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []

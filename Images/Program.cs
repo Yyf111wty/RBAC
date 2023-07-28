@@ -5,6 +5,7 @@ using Dal.JWT;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
+using Dal.RedisCashe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +37,10 @@ builder.Services.AddEndpointsApiExplorer();
 //注册身份验证和授权服务
 builder.Services.AddAuthenticationSetup(builder.Configuration);
 builder.Services.AddAuthorizationSetup();
+
+//注册CSReids服务
+builder.Services.AddCSRedisCache(builder.Configuration["RedisConnectionString"]);
+
 //配置SqlSugar
 builder.Services.useSqlSugar(builder.Configuration);
 //配置JWT

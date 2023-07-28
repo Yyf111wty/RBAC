@@ -22,6 +22,34 @@ namespace Dal.Services
             _db = db;
         }
 
+        //账号验证
+        public int AccountVerify(string username)
+        {
+            User user = _db.Queryable<User>().Single(s => s.Empno.Equals(username) || s.CellPhone.Equals(username) || s.Email.Equals(username));
+            if (user != null)
+            {
+                if (user.Status)
+                {
+                    return 1;
+                }
+                else
+                {
+                    TimeSpan timeDifference = (TimeSpan)(DateTime.Now - user.User_Update);
+                    if (timeDifference.TotalMinutes > 3)
+                    {
+                        user.Status = true;
+                        user.User_Update = DateTime.Now;
+                        return _db.Updateable<User>(user).ExecuteCommand();
+                    }
+                    return 0;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
         /// <summary>
         /// 添加用户
         /// </summary>
@@ -48,6 +76,21 @@ namespace Dal.Services
             }
 
         }
+        //冻结账户
+        public int BlockedAccount(string username)
+        {
+            User user = _db.Queryable<User>().Single(s => s.Empno.Equals(username));
+            if (user != null)
+            {
+                user.Status = false;
+                user.User_Update = DateTime.Now;
+                return _db.Updateable<User>(user).ExecuteCommand();
+            }
+            else
+            {
+                return -1;
+            }
+        }
         /// <summary>
         /// 保存登录用户
         /// </summary>
@@ -72,7 +115,11 @@ namespace Dal.Services
                 return _db.Updateable(loginInfo).ExecuteCommand();
             }
         }
-
+        /// <summary>
+        /// 获取菜单 By 用户ID
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
         public List<Permission> GetPermissions(string UserId)
         {
             List<Permission> permissions = new();

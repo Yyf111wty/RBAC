@@ -10,7 +10,9 @@ namespace Dal.Interfaces
 {
     public interface IUserService
     {
+        int AccountVerify(string username);
         int Add(UserAddDto user);
+        int BlockedAccount(string username);
         List<Permission> GetPermissions(string UserId);
         int SaveLoginUser(string Token, UserDto User);
     }

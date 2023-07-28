@@ -50,7 +50,7 @@ namespace API.Auth
                         return Task.CompletedTask;
                     }
                     //查询登录用户的权限
-                    List<Permission> permissions = new();
+                    List<Entity.Models.Permission> permissions = new();
                     permissions = _userService.GetPermissions(userIdClaim.Value);
 
                     string requestUrl = requirement.Path.Replace('/', '.').ToLower(); //获取请求的api路径

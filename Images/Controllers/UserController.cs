@@ -5,10 +5,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Dal.Permissions;
+using Dal.JWT;
+using System.Text.RegularExpressions;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -40,10 +42,9 @@ namespace API.Controllers
             {
                 return Ok(new ResponseModel<object>() { Code = 200, Data = data, Msg = "账号已经存在,请重新输入!" });
             }
-
         }
         /// <summary>
-        /// 获取所有接口常量
+        /// 获取所有接口常量(promissions中定义的)
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

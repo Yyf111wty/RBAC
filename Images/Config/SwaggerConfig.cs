@@ -20,6 +20,15 @@ namespace API.Config
         {            
             Services.AddSwaggerGen(c =>
             {
+                //var basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location);  //获取应用程序的运行目录
+                //获取应用程序所在的绝对路径
+                var basePath = AppContext.BaseDirectory;
+                //动态获取xml文件的名称
+                var xmlfile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //拼接XML文件所在路径
+                var xmlPath = Path.Combine(basePath, xmlfile);
+                //让Swagger显示方法、类的XML注释信息
+                c.IncludeXmlComments(xmlPath, true);
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "YYF&RBAC",

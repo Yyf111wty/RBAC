@@ -35,15 +35,28 @@ namespace Dal.Permissions
             public const string Search = "Permissions.User.Search";
             public const string Edit = "Permissions.User.Edit";
         }
-        [DisplayName("Permissionc")]
-        [Description("Permissionc Permissions")]
-        public static class Permissionc
+        [DisplayName("Permission")]
+        [Description("Permission Permissions")]
+        public static class Permission
         {
-            public const string View = "Permissions.Permissionc.View";
-            public const string Create = "Permissions.Permissionc.Create";
-            public const string Search = "Permissions.Permissionc.Search";
+            public const string View = "Permissions.Permission.View";
+            public const string Create = "Permissions.Permission.Create";
+            public const string Edit = "Permissions.Permission.Edit";
+            public const string Delete = "Permissions.Permission.Delete";
+            public const string Search = "Permissions.Permission.Search";
         }
-
+        [DisplayName("Role")]
+        [Description("Role Permissions")]
+        public static class Role
+        {
+            public const string View = "Permissions.Role.View";
+            public const string Create = "Permissions.Role.Create";
+            public const string Edit = "Permissions.Role.Edit";
+            public const string Delete = "Permissions.Role.Delete";
+            public const string Export = "Permissions.Role.Export";
+            public const string Search = "Permissions.Role.Search";
+            public const string Import = "Permissions.Role.Import";
+        }
         //[DisplayName("Brands")]
         //[Description("Brands Permissions")]
         //public static class Brands

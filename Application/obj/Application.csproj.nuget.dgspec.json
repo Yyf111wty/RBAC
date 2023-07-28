@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\YunfeiYouWork\\Images\\Application\\Application.csproj": {}
+    "D:\\YunfeiYouWork\\RBACgit\\Images\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\YunfeiYouWork\\Images\\Application\\Application.csproj": {
+    "D:\\YunfeiYouWork\\RBACgit\\Images\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\YunfeiYouWork\\Images\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\YunfeiYouWork\\RBACgit\\Images\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\YunfeiYouWork\\Images\\Application\\Application.csproj",
+        "projectPath": "D:\\YunfeiYouWork\\RBACgit\\Images\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\sszjj\\.nuget\\packages\\",
-        "outputPath": "D:\\YunfeiYouWork\\Images\\Application\\obj\\",
+        "outputPath": "D:\\YunfeiYouWork\\RBACgit\\Images\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
